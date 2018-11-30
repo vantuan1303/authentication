@@ -1,7 +1,8 @@
 #!/usr/local/bin/fish
-docker stop authentication
-docker rm authentication
-docker build -t authentication .
-docker run --name authentication -d -p 80:3000 authentication
+docker stop nodeapp
+docker rm nodeapp
+docker build -t nodeapp .
+docker run --name nodeapp -d -p 80:3000 nodeapp
 sleep 1
 curl http://localhost
+
