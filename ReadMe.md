@@ -1,9 +1,9 @@
 #MongoDB:
-Info: /database/database.js
+Info: myweb/database/database.js
 
 Source NoSQL: mongo-database
 
-mongod --dbpath /Volumes/Data/Learning/LearnWeb/authentication/myweb/mongo-database  --port 27018 --auth
+mongod --dbpath /Volumes/Data/Learning/LearnWeb/authentication/mongo-database  --port 27018 --auth
 
 
 #All router:
