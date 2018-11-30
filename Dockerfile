@@ -1,14 +1,14 @@
 
 FROM mhart/alpine-node:latest
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/nodeapp
 
-COPY ./authentication/package.json /usr/src/app/
+COPY ./authentication/package.json /usr/src/nodeapp/
 
 RUN yarn \
 && mkdir /usr/src/logs
 
-COPY ./authentication/ /usr/src/app/
+COPY ./authentication/ /usr/src/nodeapp/
 
 EXPOSE 3000
 
