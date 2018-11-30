@@ -1,4 +1,4 @@
-const PORT = 80
+const PORT = 3000
 const HOST = '0.0.0.0'
 const nodemailer = require('nodemailer')
 const sendEmail = async (receiverEmail, secretKey) => {
