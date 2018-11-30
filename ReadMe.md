@@ -31,3 +31,8 @@ Get detail BlogPost: GET http://localhost:3000/blogposts/getDetailBlogPost
 Update BlogPost: PUT http://localhost:3000/blogposts/updateBlogPost
 
 Delete BlogPost: DELETE http://localhost:3000/blogposts/deleteBlogPost
+
+
+How to use git
+Remove cached: git rm -r --cached .
+Add all: git add .
