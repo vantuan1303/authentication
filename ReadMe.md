@@ -1,3 +1,8 @@
+#Update docker
+Easy runing with 1 command!
+First: Download and install Docker
+Second: go to Folder: Authentication and run: ./build.sh
+
 #MongoDB:
 Info: myweb/database/database.js
 

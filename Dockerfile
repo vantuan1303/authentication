@@ -1,13 +1,27 @@
 FROM mhart/alpine-node:latest
 
-WORKDIR /src/app
+WORKDIR /usr/src/app
 
-COPY ./myweb/package.json /src/app/
+COPY ./myweb/package.json /usr/src/app
 
 RUN yarn \
-&& mkdir /src/logs
+&& mkdir /usr/src/logs
 
-COPY ./myweb/ /src/app/
+COPY ./myweb/ /usr/src/app/
+
+EXPOSE 3000
+
+ENTRYPOINT ["./entry.sh"]
+FROM mhart/alpine-node:latest
+
+WORKDIR /usr/src/app
+
+COPY ./myweb/package.json /usr/src/app
+
+RUN yarn \
+&& mkdir /usr/src/logs
+
+COPY ./myweb/ /usr/src/app/
 
 EXPOSE 3000
 

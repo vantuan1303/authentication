@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const connectDatabase = async () => {
     try {
-        let url = 'mongodb://tuan:12345678@127.0.0.1:27018/mongo-database'
+        let url = 'mongodb://tuan:12345678@mongo:27017/db'
         let options = {
             connectTimeoutMS: 10000,
             useNewUrlParser: true,

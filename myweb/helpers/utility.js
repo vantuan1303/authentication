@@ -16,8 +16,8 @@ const sendEmail = async (receiverEmail, secretKey) => {
             subject: 'Active email',
             html: `<h1>Please click here to acctive your account</h1> http://${HOST}:${PORT}/users/activateUser?secretKey=${secretKey}&email=${receiverEmail}`
         }
-        let info = transporter.sendMail(mailOptions)
-        console.log(`Message send %s: ${info.messageId}`)
+        // let info = transporter.sendMail(mailOptions)
+        // console.log(`Message send %s: ${info.messageId}`)
     } catch (error) {
         throw error
     }
