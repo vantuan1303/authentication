@@ -1,17 +1,31 @@
-#Update docker
-Easy runing with 1 command!
+Node JS Authentication
+##Run with Docker
 First: Download and install Docker
-Second: go to Folder: Authentication and run: ./build.sh
+Second: Go to myweb/database/database.js
+Change: url = 'mongodb://tuan:12345678@mongo:27017/db'
+Third: go to Folder: Authentication and run: ./build.sh
 
-#MongoDB:
-Info: myweb/database/database.js
+##Run normally by NodeJS
+#First: Run command:
++ cd myweb
++ yarn
 
-Source NoSQL: mongo-database
+#Second: Create a new database with mongo:
++ mkdir data 
+(if non-exits)
++ mongod --dbpath ./data --port 27017
+Conect from client: 
++ mongo --port 27017
++ use db
++ db.createUser({user:"tuan", pwd:"12345678", roles: ["readWrite", "dbAdmin", "dbOwner"]});
 
-mongod --dbpath /Volumes/Data/Learning/LearnWeb/authentication/mongo-database  --port 27018 --auth
+#Restart server: 
++ mongod --dbpath /Users/admin/mongodb/ --port 27017 --auth
 
+#Conect againt from client:
++ mongo --port 27017 -u "tuan" -p "12345678" --authenticationDatabase "db"
 
-#All router:
+##All router:
 
 #User router:
 
